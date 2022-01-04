@@ -1,4 +1,18 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
-
-// Write your JavaScript code.
+﻿function exibeAlertaCookie() {
+    var myModal = new bootstrap.Modal(document.getElementById("myModal"),
+        {
+            backdrop: 'static',
+            keyboard: false
+        });
+    myModal.show();
+    myModal.hidePrevented;
+}
+$("#btnAcceptPolicy").on("click", () => {
+    $.post("/Home/GravaCookie");
+});
+$(document).ready(function () {
+    var x;
+    $.get("/Home/VerificaCookie").fail(() => {
+        exibeAlertaCookie();
+    });
+});
